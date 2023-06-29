@@ -1,0 +1,30 @@
+.container {
+  .card {
+    background: var(--surface-card);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    .dropdown {
+      display: flex;
+      flex-direction: column;
+    }
+    .listItem {
+      padding: 1rem;
+      & > div {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        h1 {
+          font-size: 1rem;
+        }
+        & > a {
+          font-size: 0.9rem;
+          margin-left: auto;
+        }
+      }
+      & > p {
+        margin: 0.5rem 0 1rem 0;
+      }
+    }
+  }
+}
