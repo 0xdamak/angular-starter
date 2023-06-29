@@ -1,0 +1,31 @@
+<div *ngIf="user" class="container">
+  <button (click)="back()">Go back</button>
+  <div class="card">
+    <img [src]="user.avatar_url" [alt]="user.name" />
+    <h1 style="margin: 0">{{ user.name }}</h1>
+    <p>{{ user.login }}</p>
+    <p style="margin: 0.5rem 0">{{ user.bio }}</p>
+    <div class="stats">
+      <h1>{{ user.followers }} <span> followers </span></h1>
+      <h1>{{ user.following }} <span> following </span></h1>
+    </div>
+    <h1 *ngIf="user.company">
+      <i class="pi pi-building"></i>
+      {{ user.company }}
+    </h1>
+    <h1 *ngIf="user.location">
+      <i class="pi pi-map-marker"></i>
+      {{ user.location }}
+    </h1>
+    <h1 *ngIf="user.email">
+      <i class="pi pi-envelope"></i>
+      {{ user.email }}
+    </h1>
+    <h1 *ngIf="user.twitter_username">
+      <i class="pi pi-twitter"></i>
+      {{ user.twitter_username }}
+    </h1>
+  </div>
+</div>
+
+<app-loader *ngIf="!user"></app-loader>
